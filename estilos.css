@@ -1,0 +1,151 @@
+/* Menú de navegación horizontal superior */
+.lista-check {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  display: flex; 
+  gap: 15px; 
+  justify-content: center; 
+  font-family: sans-serif;
+}
+
+.lista-check a {
+  display: block;
+  text-decoration: none;
+  background-color: #500b0b; /* Rojo Vino Oscuro */
+  color: white;
+  padding: 10px 20px; 
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+/* Efecto hover al pasar sobre el menú */
+.lista-check a:hover {
+  background-color: #2980b9; /* Azul de resalte */
+}
+   
+/* Pie de página estático */
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 14px;
+  padding: 5px 0;
+}                  
+
+/* Fondo general */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #7e0a0a; /* Fondo rojo característico */
+  color: white;
+  padding-bottom: 60px; /* Previene que el footer tape texto */
+}
+
+/* Títulos principales */
+h1, h2 {
+  color: #e2d62f; /* Tono dorado/amarillo */
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+}
+
+/* Contenedor del carrusel automático */
+.carrusel-automatico {
+  max-width: 800px;
+  margin: 30px auto;
+  overflow: hidden; 
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.carrusel-linea {
+  display: flex;
+  width: 500%; /* Espacio total asignado en base a tus fotogramas */
+  animation: desplazar 15s infinite linear; 
+}
+
+.carrusel-linea img {
+  width: 20%; 
+  height: 450px;
+  object-fit: cover;
+}
+
+.carrusel-automatico:hover .carrusel-linea {
+  animation-play-state: paused;
+}
+
+/* Animación del carrusel */
+@keyframes desplazar {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(0); } 
+  33% { transform: translateX(-20%); } 
+  58% { transform: translateX(-20%); } 
+  66% { transform: translateX(-40%); } 
+  91% { transform: translateX(-40%); } 
+  100% { transform: translateX(-60%); }
+}              
+
+/* Estilo para bloques de texto informativos */
+.parrafo-moderno {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  color: #e2d62f; /* Color amarillo brillante legible */
+  text-align: justify;  
+  line-height: 1.6;     
+  letter-spacing: 0.5px;
+  margin: 20px auto;
+  max-width: 850px;
+  padding: 0 15px;
+}                    
+
+/* Contenedor de la tabla responsiva */
+.contenedor-tabla {
+  overflow-x: auto;
+  margin: 30px auto;
+  max-width: 850px;
+  padding: 0 15px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Estilos de la tabla de álbumes */
+table {
+  width: 100%;
+  border-collapse: collapse; 
+  background-color: #7e0a0a;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  overflow: hidden; 
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+
+thead {
+  background-color: #461d0a; 
+  color: #f5d72c;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+tbody tr {
+  border-bottom: 1px solid #ce4c4c;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #af2d1c;
+}
+
+/* Resalte interactivo al posicionarse sobre los álbumes */
+tbody tr:hover {
+  background-color: #ddbb21;
+  color: black;
+  cursor: pointer;
+}
